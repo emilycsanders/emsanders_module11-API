@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load model once when the app starts
-model = joblib.load("/Users/emilysanders/Documents/GitHub/emsanders_module11/salary_predict_model.ml")
+model = joblib.load("salary_predict_model.ml")
 
 
 @app.route("/")
@@ -67,4 +67,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5002, debug=True)
+    app.run(host="0.0.0.0", port=5003, debug=True)
